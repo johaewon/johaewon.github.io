@@ -288,7 +288,7 @@
       Graphical Abstract
     </h2>
 
-    <div class="content" style="text-align: center;">
+    <div class="column" style="text-align: center;">
       <img 
         src="./static/images/graphical_abstract.jpg"
         alt="Graphical Abstract"
@@ -370,7 +370,57 @@
   </div>
 </section>
 
+<!-- Technical Details Section 1 -->
+<section class="section" style="background-color: #ffffff;">
+  <div class="container is-max-desktop">
 
+    <h2 class="title is-3 has-text-centered" style="margin-bottom: 2.5rem;">
+      Technical Details
+    </h2>
+
+    <div class="content has-text-justified" style="font-size: 1.05rem; line-height: 1.8; max-width: 950px; margin: 0 auto;">
+      <p>
+        This section provides detailed descriptions of the proposed RS-Net architecture, including
+        the spatial context encoder, temporal context encoder, and relation scoring decoder.
+        The model is designed to explicitly capture both intra-frame relational dependencies
+        and long-term inter-frame contextual evolution through a hierarchical Transformer-based framework.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Technical Details Section 2 (Integration) -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3 has-text-centered" style="margin-bottom: 2.5rem;">
+      RS-Net Integration
+    </h2>
+
+    <div class="content" style="text-align: center; margin-bottom: 2rem;">
+      <img 
+        src="./static/images/integration.jpg"
+        alt="RS-Net Integration Diagram"
+        style="max-width: 100%; height: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.08);"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="content has-text-justified" style="font-size: 1.05rem; line-height: 1.8; max-width: 950px; margin: 0 auto;">
+      <p>
+        RS-Net is integrated into existing dynamic scene graph generation frameworks
+        through a modular design that requires minimal architectural modification.
+        The relation scoring module operates alongside the original predicate classifier,
+        enabling explicit ranking of object relations using video-level temporal context.
+        This integration enhances relational reasoning while preserving compatibility
+        with existing DSGG pipelines.
+      </p>
+    </div>
+
+  </div>
+</section>
 
 <!-- Qualitative Results -->
 <section class="section hero" style="padding-bottom: 2rem;">
