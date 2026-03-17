@@ -288,11 +288,11 @@
       Graphical Abstract
     </h2>
 
-    <div class="column" style="text-align: center;">
+    <div style="text-align: center;">
       <img 
         src="./static/images/graphical_abstract.jpg"
         alt="Graphical Abstract"
-        style="max-width: 100%; height: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.08);"
+        style="width: 100%; max-width: 1200px; height: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.08);"
         loading="lazy"
       />
     </div>
@@ -370,7 +370,7 @@
   </div>
 </section>
 
-<!-- Technical Details Section 1 -->
+<!-- Technical Details -->
 <section class="section" style="background-color: #ffffff;">
   <div class="container is-max-desktop">
 
@@ -378,13 +378,39 @@
       Technical Details
     </h2>
 
-    <div class="content has-text-justified" style="font-size: 1.05rem; line-height: 1.8; max-width: 950px; margin: 0 auto;">
+    <div class="content has-text-justified" style="font-size: 1.05rem; line-height: 1.8; max-width: 1000px; margin: 0 auto;">
+
+      <h4 class="title is-5">3.1 Motivation and Overview</h4>
       <p>
-        This section provides detailed descriptions of the proposed RS-Net architecture, including
-        the spatial context encoder, temporal context encoder, and relation scoring decoder.
-        The model is designed to explicitly capture both intra-frame relational dependencies
-        and long-term inter-frame contextual evolution through a hierarchical Transformer-based framework.
+        We propose RS-Net to address the distributional mismatch between limited training supervision
+        and exhaustive inference in Dynamic Scene Graph Generation (DSGG).
+        Unlike prior methods that implicitly learn relation importance through classification,
+        RS-Net introduces an explicit relation scoring mechanism that ranks both positive and negative object pairs.
       </p>
+
+      <h4 class="title is-5">3.2 Relation Representation Construction</h4>
+      <p>
+        For each object pair, we construct relation representations by concatenating projected visual features,
+        category embeddings, and union region features.
+        This formulation captures both semantic and spatial interactions between objects.
+      </p>
+
+      <h4 class="title is-5">3.3 Spatial and Temporal Context Encoding</h4>
+      <p>
+        RS-Net employs a Transformer-based spatial context encoder to model intra-frame relational dependencies,
+        followed by a temporal context encoder that captures long-term dependencies across the entire video.
+        A learnable context token summarizes frame-level and video-level information,
+        enabling global relational reasoning beyond short temporal windows.
+      </p>
+
+      <h4 class="title is-5">3.4 Relation Scoring</h4>
+      <p>
+        The relation scoring decoder predicts a 2-dimensional probability distribution
+        indicating whether each relation is contextually meaningful.
+        This design allows stable training and provides an explicit probabilistic interpretation
+        for ranking object relations during inference.
+      </p>
+
     </div>
 
   </div>
