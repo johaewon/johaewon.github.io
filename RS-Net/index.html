@@ -291,16 +291,7 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            existing methods are trained only on annotated object pairs and lack guidance for non-related pairs, making it
-            difficult to identify meaningful relations during inference. In this paper, we propose Relation Scoring Network
-            (RS-Net), a modular framework that scores the contextual importance of object pairs using both spatial interactions and long-range temporal context. RS-Net consists of a spatial context encoder with learnable context tokens
-            and a temporal encoder that aggregates video-level information. The resulting relation scores are integrated into
-            a unified triplet scoring mechanism to enhance relation prediction. RS-Net can be easily integrated into existing DSGG models without architectural changes. Experiments on the Action Genome dataset show that RS-Net
-            consistently improves both Recall and Precision across diverse baselines, with notable gains in mean Recall,
-            highlighting its ability to address the long-tailed distribution of relations. Furthermore, our qualitative analysis demonstrates that the contextually refined scene graphs from RS-Net serve as an effective semantic prior in
-            downstream applications such as video captioning, guiding Large Multimodal Models (LMMs) to focus on salient
-            actions. Despite the increased number of parameters, RS-Net maintains competitive efficiency, achieving superior
-            performance over state-of-the-art methods
+            Dynamic Scene Graph Generation (DSGG) models how object relations evolve over time in videos. However, existing methods are trained only on annotated object pairs and lack guidance for non-related pairs, making it difficult to identify meaningful relations during inference. In this paper, we propose Relation Scoring Network (RS-Net), a modular framework that scores the contextual importance of object pairs using both spatial interactions and long-range temporal context. RS-Net consists of a spatial context encoder with learnable context tokens and a temporal encoder that aggregates video-level information. The resulting relation scores are integrated into a unified triplet scoring mechanism to enhance relation prediction. RS-Net can be easily integrated into existing DSGG models without architectural changes. Experiments on the Action Genome dataset show that RS-Net consistently improves both Recall and Precision across diverse baselines, with notable gains in mean Recall, highlighting its ability to address the long-tailed distribution of relations. Furthermore, our qualitative analysis demonstrates that the contextually refined scene graphs from RS-Net serve as an effective semantic prior in downstream applications such as video captioning, guiding Large Multimodal Models (LMMs) to focus on salient actions. Despite the increased number of parameters, RS-Net maintains competitive efficiency, achieving superior performance over state-of-the-art methods.
           </p>
         </div>
       </div>
@@ -344,57 +335,37 @@
     <div class="content" style="font-size: 1.05rem; line-height: 1.8;">
       <ul style="list-style-position: outside; padding-left: 1.5rem;">
         <li style="margin-bottom: 1rem;">
-          <strong>RS-Net enables relation scoring that integrates with existing frameworks without changes.
+          <strong>RS-Net enables relation scoring that integrates with existing frameworks without changes.</strong>
         </li>
         <li style="margin-bottom: 1rem;">
-          <strong>Our scoring uses spatial and temporal context tokens to assess each object pair.
+          <strong>Our scoring uses spatial and temporal context tokens to assess each object pair.</strong>
         </li>
         <li style="margin-bottom: 1rem;">
-          <strong>It scores relation importance using spatial and long-range temporal context cues.
+          <strong>It scores relation importance using spatial and long-range temporal context cues.</strong>
         </li>
         <li style="margin-bottom: 1rem;">
-          <strong>RS-Net can serve as a relation prior for LMMs’ downstream video understanding tasks.
+          <strong>RS-Net can serve as a relation prior for LMMs’ downstream video understanding tasks.</strong>
         </li>
       </ul>
     </div>
   </div>
 </section>
-<!-- End Key Contributions -->
 
 
-
-<!-- <!-- Results Section -->
-<!-- <section class="section hero is-light">
-  <!-- <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">Results</h2>
-    <div class="content has-text-justified" style="max-width: 900px; margin: 0 auto 3rem auto; font-size: 1.05rem;">
-      <!-- <p>
-        We presented RS-Net, a modular relation scoring network
-        for dynamic scene graph generation. RS-Net addresses two
-        core limitations of existing DSGG methods: the lack of supervision for non-annotated object pairs and the inability to
-        model long-range temporal context. To tackle these issues,
-        RS-Net introduces a context-aware scoring mechanism that
-        evaluates the semantic importance of object pairs by leveraging both spatial and video-level temporal representations. It
-        integrates relation scores into a unified triplet scoring formulation, enhancing the model’s ability to identify meaningful
-        relations while suppressing irrelevant ones.
-      </p> -->
-    </div> -->
-  </div> -->
-</section> -->
 
 <!-- Qualitative Results -->
-<section class="section hero">
+<section class="section hero" style="padding-bottom: 2rem;">
   <div class="hero-body">
     <div class="container is-max-desktop">
 
-      <div style="text-align: center; margin-bottom: 3rem;">
+      <div style="text-align: center; margin-bottom: 2rem;">
         <h3 class="title is-4" style="display: inline-block; padding-bottom: 0.5rem; border-bottom: 2px solid #3273dc;">
           Qualitative Results
         </h3>
       </div>
 
-      <div class="content" style="margin-bottom: 4rem;">
-        <div style="text-align: center; margin-bottom: 1.5rem;">
+      <div class="content" style="margin-bottom: 2rem;">
+        <div style="text-align: center; margin-bottom: 1rem;">
           <img 
             src="./static/images/quality.jpg" 
             alt="Qualitative comparison results"
@@ -410,21 +381,26 @@
     </div>
   </div>
 </section>
-<!-- End Qualitative Results -->
 
 <!-- Quantitative Results -->
-<section class="section hero">
+<section class="section hero" style="padding-top: 1rem;">
   <div class="container is-max-desktop">
-    <div style="text-align: center; margin-bottom: 3rem;">
+
+    <div style="text-align: center; margin-bottom: 2rem;">
       <h3 class="title is-4" style="display: inline-block; padding-bottom: 0.5rem; border-bottom: 2px solid #3273dc;">
         Quantitative Results
       </h3>
     </div>
     
     <!-- Table 1 -->
-    <div class="content" style="margin-bottom: 4rem;">
-      <div style="text-align: center; margin-bottom: 1.5rem;">
-        <img src="static/images/Tab1_quantity.png" alt="Quantitative comparison on ActionGenome dataset" style="max-width: 100%; height: auto;" loading="lazy"/>
+    <div class="content" style="margin-bottom: 2rem;">
+      <div style="text-align: center; margin-bottom: 1rem;">
+        <img 
+          src="./static/images/Tab1_quantity.png" 
+          alt="Quantitative comparison on ActionGenome dataset" 
+          style="max-width: 100%; height: auto;" 
+          loading="lazy"
+        />
       </div>
       <p class="has-text-centered" style="font-size: 0.95rem; color: #4a4a4a; max-width: 900px; margin: 0 auto;">
         <strong>Table 1.</strong> Performance comparison on the Action Genome dataset.
@@ -433,10 +409,15 @@
 
     <!-- Table 2 -->
     <div class="content">
-      <div class="columns is-centered" style="margin-bottom: 1.5rem;">
+      <div class="columns is-centered" style="margin-bottom: 1rem;">
         <div class="column">
           <div style="text-align: center;">
-            <img src="static/images/Tab2_quantity.png" alt="Performance comparison in RS-Net" style="max-width: 100%; height: auto;" loading="lazy"/>
+            <img 
+              src="./static/images/Tab2_quantity.png" 
+              alt="Performance comparison in RS-Net" 
+              style="max-width: 100%; height: auto;" 
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -444,10 +425,23 @@
         <strong>Table 2.</strong> Performance comparison with computational efficiency metrics in the SGDET task. 
       </p>
     </div>
+
   </div>
 </section>
 <!-- End Quantitative Results -->
 
+    <!-- Results Summary (NEW) -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered" style="margin-bottom: 2.5rem;">Results</h2>
+    <div class="content has-text-justified" style="max-width: 900px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8;">
+      <p>
+        We presented RS-Net, a modular relation scoring network for dynamic scene graph generation. RS-Net addresses two core limitations of existing DSGG methods: the lack of supervision for non-annotated object pairs and the inability to model long-range temporal context. To tackle these issues, RS-Net introduces a context-aware scoring mechanism that evaluates the semantic importance of object pairs by leveraging both spatial and video-level temporal representations. It integrates relation scores into a unified triplet scoring formulation, enhancing the model’s ability to identify meaningful relations while suppressing irrelevant ones.
+Experiments on the Action Genome dataset show consistent improvements in Recall, Precision, and mean Recall, while maintaining competitive efficiency. Thanks to its lightweight and modular design, RS-Net can be seamlessly integrated into existing frameworks without architectural modifications, making it a practical and generalizable solution for real-world video understanding. Furthermore, our qualitative analysis demonstrates that the structured knowledge generated by RS-Net can serve as reliable basis for multimodal reasoning tasks. These results further suggest that RS-Net can serve as a robust foundation for future DSGG research and diverse real-world video applications.
+      </p>
+    </div>
+  </div>
+</section>
 
 
 <!--BibTex citation -->
